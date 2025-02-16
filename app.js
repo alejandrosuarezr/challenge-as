@@ -26,7 +26,11 @@ function validarEntrada(){
     if(nombre === ""){        
         return false;
     }
-    //Validar que no ingresen espacios tab, numeros o caracteres
+    //validar que el nombre no contenga caracteres especiales o numeros
+    let regex = /^[a-zA-Z]+$/;
+    if(!regex.test(nombre)){
+        return false;
+    }
 
 }
 
