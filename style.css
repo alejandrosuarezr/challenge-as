@@ -1,11 +1,20 @@
 :root {
-    --color-primary: #4B69FD;
-    --color-secondary: #FFF9EB;
-    --color-tertiary: #C4C4C4;
-    --color-button: #fe652b;
-    --color-button-hover: #e55720;
-    --color-text: #444444;
+    /* Old palette - to be removed or commented out if not used elsewhere */
+    /* --color-primary: #4B69FD; */
+    /* --color-secondary: #FFF9EB; */
+    /* --color-tertiary: #C4C4C4; */
+    /* --color-button: #fe652b; */
+    /* --color-button-hover: #e55720; */
+    /* --color-text: #444444; */
+
+    --color-primary: #6A1B9A; /* Deep Purple */
+    --color-secondary: #F3E5F5; /* Light Purple Tint */
+    --color-accent: #FF6F00; /* Bright Amber for accents/buttons */
+    --color-button-hover: #FF8F00; /* Slightly lighter Amber for hover */
+    --color-text-primary: #212121; /* Dark Grey for primary text */
+    --color-text-secondary: #757575; /* Medium Grey for secondary text */
     --color-white: #FFFFFF;
+    --color-border: #BDBDBD; /* Light grey for borders */
 }
 
 /* Estilos generales */
@@ -43,7 +52,7 @@ body {
 .input-section {
     flex: 60%;
     background-color: var(--color-secondary);
-    border: 1px solid #000;
+    border: 1px solid var(--color-border);
     border-radius: 64px 64px 0 0;
     display: flex;
     flex-direction: column;
@@ -82,9 +91,10 @@ body {
 .input-name {
     width: 100%;
     padding: 10px;
-    border: 2px solid #000;
+    border: 2px solid var(--color-border);
     border-radius: 25px 0 0 25px;
     font-size: 16px;
+    color: var(--color-text-primary);
 }
 
 .button-container {
@@ -99,9 +109,10 @@ body {
     flex: 1;
     padding: 10px 15px;
     font-size: 16px;
-    border: 2px solid #333;
+    border: 2px solid var(--color-border);
     border-right: none;
     border-radius: 25px 0 0 25px;
+    color: var(--color-text-primary);
     font-family: "Merriweather", serif;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -111,26 +122,26 @@ button {
     padding: 15px 30px;
     font-family: "Inter", sans-serif;
     font-size: 16px;
-    border: 2px solid #000;
+    border: 2px solid var(--color-border);
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     cursor: pointer;
 }
 
 .button-add {
-    background-color: var(--color-tertiary);
-    color: var(--color-text);
+    background-color: var(--color-accent);
+    color: var(--color-white);
     border-radius: 0 25px 25px 0;
 }
 
 .button-add:hover {
-    background-color: #a1a1a1;
+    background-color: var(--color-button-hover);
 }
 
 /* Listas */
 ul {
     list-style-type: none;
-    color: var(--color-text);
+    color: var(--color-text-secondary);
     font-family: "Inter", sans-serif;
     font-size: 18px;
     margin: 20px 0;
@@ -138,7 +149,7 @@ ul {
 
 .result-list {
     margin-top: 15px;
-    color: #05DF05;
+    color: var(--color-accent);
     font-size: 22px;
     font-weight: bold;
     text-align: center;
@@ -151,7 +162,7 @@ ul {
     width: 100%;
     padding: 10px 40px;
     color: var(--color-white);
-    background-color: var(--color-button);
+    background-color: var(--color-accent);
     font-size: 16px;
 }
 
